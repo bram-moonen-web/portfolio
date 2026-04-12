@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Thermomètre - Portfolio GEII</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Intro -->
+        <section id="projet-intro" style="padding: 50px 10%; text-align: center;">
+            <div class="accueil-texte">
+                <h1>Thermomètre de Bain Électronique</h1>
+                <h3 style="color: var(--couleur-principale); margin-top: 15px;">Projet Technique - BUT GEII 1</h3>
+
+                <p style="margin-top: 20px; max-width: 900px; margin: 20px auto;">
+                    L'objectif de ce projet était de réaliser une carte électronique complète.
+                    On suivi un protocole que l'on a ecrit nous-meme décomposé en <strong>8 étapes de
+                        fabrication</strong>, de l'impression des plans jusqu'au contrôle final realiser sur 19 seances
+                    de cours.
+                </p>
+
+                <a href="projets.html"
+                    style="display: inline-block; margin-top: 30px; text-decoration: none; color: #333; font-weight: bold; border: 1px solid #333; padding: 10px 20px; border-radius: 0;">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Consignes & CDC (No flex wrap) -->
+        <section style="padding: 40px 10%;">
+            <h2 style="margin-bottom: 20px; text-align: center;">Consignes et Cahier des charges</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto; margin-bottom: 30px;">
+                <p>
+                    Nous avions un cahier des charges basé sur la demande du client qu'on devait respecter tout au long
+                    de ce projet.
+                </p>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <a href="TDB_CDC_V1.pdf" target="_blank"
+                    style="background-color: var(--couleur-principale); color: white; padding: 15px 25px; border-radius: 0; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                    <i class="fa-solid fa-compass-drafting" style="font-size: 1.2em;"></i>
+                    CDC (Cahier des charges)
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Documentation Technique (Gray bg) -->
+        <section style="padding: 40px 10%; background-color: #f4f4f4;">
+            <h2 style="margin-bottom: 20px; text-align: center;">Documentation Technique</h2>
+            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin: 0 auto 40px;">
+                Pour assurer la traçabilité et la qualité du projet, plusieurs dossiers techniques ont été complétés
+                tout au long du processus. Vous pouvez les consulter ci-dessous :
+            </p>
+
+            <div class="grid-container">
+                <a href="Dossier de conception EQ44.pdf" target="_blank" class="bouton-doc">
+                    <i class="fa-solid fa-compass-drafting" style="font-size: 1.2em;"></i>
+                    DDC (Dossier de conception)
+                </a>
+
+                <a href="Dossier de Fabrication.docx.pdf" target="_blank" class="bouton-doc">
+                    <i class="fa-solid fa-industry" style="font-size: 1.2em;"></i>
+                    DDF (Dossier de Fabrication)
+                </a>
+
+                <a href="Ressources 4 - Comment fabriquer une carte éléctronique.pdf" target="_blank"
+                    class="bouton-doc">
+                    <i class="fa-solid fa-list-check" style="font-size: 1.2em;"></i>
+                    Procédé de Fabrication
+                </a>
+
+                <a href="DDV_TDB.docx.pdf" target="_blank" class="bouton-doc">
+                    <i class="fa-solid fa-file-circle-check" style="font-size: 1.2em;"></i>
+                    DDV (Dossier de Vérification)
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. Step 1 (White bg) -->
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">1. Impression des Typons et Plans</h2>
+                <p>
+                    Avant la production, la préparation documentaire est cruciale. Nous avons besoin de deux typons
+                    superposés pour une opacité optimale.
+                </p>
+                <ul style="margin-top: 15px; margin-left: 20px; line-height: 1.6;">
+                    <li><strong>Bottom Copper :</strong> Imprimé en normal (échelle 100%).</li>
+                    <li><strong>Top Copper :</strong> Imprimé en <strong>miroir</strong> (échelle 100%).</li>
+                </ul>
+                <p style="margin-top: 10px;">Les deux typons sont scotchés ensemble sur une vitre pour garantir un
+                    alignement parfait.</p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px; display: flex; gap: 20px; text-align: center;">
+                <div style="flex: 1;">
+                    <img src="PHOTO_TYPON_TOP.jpg" alt="Typon Top Copper"
+                        style="width: 100%; border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                </div>
+                <div style="flex: 1;">
+                    <img src="PHOTO_TYPON_BOTOM.jpg" alt="Typon Bottom Copper"
+                        style="width: 100%; border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Step 2 (Gray bg) -->
+        <section
+            style="padding: 40px 10%; display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 50px; background-color: #f4f4f4;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="INSO.JPG" alt="Bram devant la machine à insoler"
+                    style="width: 100%; border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">Étape d'insolation en
+                    salle jaune</p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">2. Phase Insolation</h2>
+                <p>
+                    Le circuit imprimé photosensible est placé dans le typon puis inséré dans la machine à insoler sous
+                    vide.
+                </p>
+                <br>
+                <div
+                    style="background-color: var(--couleur-fond-contenu); padding: 15px; border-radius: 0; border-left: 4px solid var(--couleur-principale);">
+                    <strong>Processus Chimique :</strong><br>
+                    Après l'exposition UV, le circuit passe dans le <strong>révélateur</strong> (péroxide) pendant
+                    environ 15 secondes, puis est rincé à l'eau sans être séché.
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Step 3 (White bg) -->
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">3. Phase Oxydoréduction (Gravure)</h2>
+                <p>
+                    Nous utilisons une machine de gravure réglée sur une vitesse de 30. Ce bain chimique dissout le
+                    cuivre non protégé par le film photochimique.
+                </p>
+                <br>
+                <p>
+                    Le cycle dure environ <strong>5 à 6 minutes</strong>. Si du cuivre persiste, un second passage à
+                    vitesse plus rapide (80) est effectué.
+                </p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <img src="GRAV.jpg" alt="Machine de gravure Bungard"
+                    style="width: 100%; border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">La machine de gravure
+                    Bungard</p>
+            </div>
+        </section>
+
+        <!-- 7. Step 4 & 5 (Gray bg) - No images so just center grid -->
+        <section style="padding: 40px 10%; background-color: #f4f4f4;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div
+                    style="background: var(--couleur-fond-contenu); padding: 20px; border-radius: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h2 style="margin-bottom: 20px;">4. Insolation de nettoyage</h2>
+                    <p style="margin-top: 10px; font-size: 0.95em;">
+                        On replace le circuit dans l'insoleuse <strong>sans typon</strong> pour "brûler" le reste du
+                        film protecteur. Après un dernier passage au révélateur et nettoyage, le cuivre est nu.
+                    </p>
+                </div>
+
+                <div
+                    style="background: var(--couleur-fond-contenu); padding: 20px; border-radius: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h2 style="margin-bottom: 20px;">5. Les Tests</h2>
+                    <p style="margin-top: 10px; font-size: 0.95em;">
+                        Vérification à l'ohmmètre :
+                    </p>
+                    <ul style="margin-left: 20px; font-size: 0.9em; margin-top: 5px;">
+                        <li><strong>Continuité :</strong> Ça doit biper sur la piste.</li>
+                        <li><strong>Micro-contacts :</strong> Ça ne doit PAS biper entre deux pistes voisines.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Step 6 (White bg) -->
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">6. Perçage</h2>
+                <p>
+                    Étape de précision réalisée sur perceuse à colonne. On se réfère au plan de perçage (ARES Drill
+                    Plot).
+                </p>
+                <br>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Choix du foret :</strong> Mesuré au pied à coulisse.</li>
+                    <li><strong>Installation :</strong> Serrage "dent sur dent" dans le mandrin.</li>
+                    <li><strong>Sécurité :</strong> Réglage de la hauteur à 1-2 cm de la surface.</li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <img src="PERSAGE.JPG" alt="Perçage du circuit imprimé"
+                    style="width: 100%; border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">Perçage minutieux des
+                    pastilles</p>
+            </div>
+        </section>
+
+        <!-- 9. Step 7 (Gray bg) -->
+        <section
+            style="padding: 40px 10%; display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 50px; background-color: #f4f4f4;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="SOUDURE.JPG" alt="Soudure des composants"
+                    style="width: 100%; border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">Soudure des composants
+                    traversants</p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">7. Soudure</h2>
+                <p>
+                    Fer réglé à <strong>380°C</strong>. L'ordre de montage est strict : des composants les plus bas vers
+                    les plus hauts (Vias > Résistances > Supports > Condensateurs).
+                </p>
+                <br>
+                <p>
+                    <strong>La technique :</strong><br>
+                    Le fer doit chauffer la pastille et la broche simultanément (3s), puis on apporte l'étain (2s) pour
+                    former un cône parfait à 45°.
+                </p>
+            </div>
+        </section>
+
+        <!-- 10. Step 8 (White bg) -->
+        <section style="padding: 40px 10%; text-align: center;">
+            <h2 style="margin-bottom: 20px;">8. Contrôle Final</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p>
+                    Avant la mise sous tension, une inspection visuelle (sens des composants, valeurs) et technique
+                    (multimètre/binoculaire) est obligatoire pour éviter tout court-circuit.
+                </p>
+            </div>
+        </section>
+
+        <!-- 11. Conclusion (Gray bg) -->
+        <section style="padding: 50px 10%; background-color: #f4f4f4;">
+            <div style="max-width: 1000px; margin: 0 auto; overflow: hidden;">
+                <h2 style="text-align: center; margin-bottom: 40px;">Résultat & Mon Point de Vue</h2>
+
+                <figure style="float: left; width: 45%; min-width: 300px; margin: 0 40px 20px 0; text-align: center;">
+                    <img src="CARTE_TDB-removebg-preview.png" alt="Thermomètre de bain"
+                        style="width: 100%; max-width: 500px; border-radius: 0;">
+                </figure>
+
+                <h2 style="margin-bottom: 20px;">Ce que j'ai appris</h2>
+                <p style="line-height: 1.8; font-size: 1.1em; text-align: justify;">
+                    Au-delà de la théorie, ce projet a confronté notre équipe à la réalité physique de
+                    l'électronique. Nous avons dû concilier les contraintes techniques avec la précision
+                    nécessaire lors de l'insolation et de la soudure, où la moindre erreur est fatale — un
+                    point critique validé lors de notre revue de vérification. Cette expérience nous a
+                    appris que la rigueur et la sécurité sont indissociables de la réussite. Le résultat
+                    final est une vraie fierté : notre carte fonctionne parfaitement et l'intégralité des
+                    exigences du cahier des charges a été scrupuleusement respectée.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>

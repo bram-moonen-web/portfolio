@@ -1,0 +1,685 @@
+/* ==================================
+   STYLE.CSS - VERSION COMPLÈTE
+   ================================== */
+
+/* ==================================
+   1. VARIABLES (Tes choix de design)
+   ================================== */
+:root {
+    /* Tu peux changer ces couleurs quand tu veux ! */
+    --couleur-principale: #007bff;
+    /* Un bleu "tech" (pour les titres, boutons) */
+    --couleur-secondaire: #2c3e50;
+    /* Un bleu-nuit/gris (pour la barre nav) */
+
+    /* C'est ça, tes "rectangles de contraste" ! */
+    --couleur-fond: #f8f9fa;
+    /* FOND DE LA PAGE (ton "blanc clair") */
+    --couleur-fond-contenu: #ffffff;
+    /* FOND DU CONTENU (ton "blanc foncé"/rectangle) */
+
+    --couleur-texte: #333333;
+    /* Texte principal (sombre) */
+    --couleur-texte-inverse: #ffffff;
+    /* Texte sur les fonds foncés (blanc) */
+
+    /* Ta police arrondie */
+    --police-principale: 'Nunito', sans-serif;
+}
+
+/* --- DARK MODE --- */
+[data-theme="dark"] {
+    --couleur-secondaire: #1a252f;
+    --couleur-fond: #121212;
+    --couleur-fond-contenu: #1e1e1e;
+    --couleur-texte: #e0e0e0;
+}
+
+/* Bouton Dark Mode */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-texte-inverse);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    /* Animation d'apparition retardée (après l'intro) */
+    opacity: 0;
+    animation: fadeInButton 0.5s ease-out forwards;
+    animation-delay: 3.2s;
+    /* Apparaît après que l'écran soit monté */
+}
+
+@keyframes fadeInButton {
+    to {
+        opacity: 1;
+    }
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: var(--couleur-principale);
+}
+
+
+/* ==================================
+   2. STYLE GÉNÉRAL (Le look de base)
+   ================================== */
+body {
+    font-family: var(--police-principale);
+    margin: 0;
+    padding: 0;
+    background-color: var(--couleur-fond);
+    /* FOND GRIS CLAIR */
+    color: var(--couleur-texte);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--couleur-principale);
+    /* Titres en couleur principale */
+}
+
+/* ==================================
+   3. HEADER ET NAVIGATION (Ta "barre du milieu")
+   ================================== */
+header {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-texte-inverse);
+    padding: 1rem 0;
+    /* Espace en haut/bas de la barre */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Petite ombre sous la barre */
+}
+
+nav ul {
+    list-style: none;
+    /* Enlève les puces */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    /* <<< C'EST ÇA QUI CENTRE TES LIENS ! */
+}
+
+nav ul li {
+    display: inline;
+    /* Met les liens sur la même ligne */
+    margin: 0 20px;
+    /* Espace entre les liens */
+}
+
+nav ul li a {
+    color: var(--couleur-texte-inverse);
+    text-decoration: none;
+    /* Enlève le soulignement */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Effet doux au survol */
+}
+
+/* Effet au survol des liens */
+nav ul li a:hover {
+    color: var(--couleur-principale);
+    /* Le lien devient bleu au survol */
+}
+
+
+/* ==================================
+   4. LE CONTENU (Ton "rectangle blanc")
+   ================================== */
+main {
+    /* C'est ton "rectangle" blanc ! */
+    display: block;
+    max-width: 900px;
+    /* Largeur max du contenu */
+
+    /* 'auto' à gauche/droite le centre sur la page */
+    margin: 30px auto;
+    /* 30px d'espace en haut/bas */
+
+    padding: 25px;
+    /* Espace À L'INTÉRIEUR du rectangle */
+    background-color: var(--couleur-fond-contenu);
+    /* FOND BLANC */
+    border-radius: 8px;
+    /* Coins arrondis (plus moderne) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* Ombre très légère */
+}
+
+/* Améliore la lisibilité des paragraphes dans le rectangle */
+main p {
+    line-height: 1.7;
+    /* Espace entre les lignes (très important !) */
+    font-size: 1.1rem;
+    /* Texte un peu plus grand */
+}
+
+/* ==================================
+   5. BOUTON "PEPS" (Call To Action)
+   ================================== */
+.bouton-cta {
+    display: inline-block;
+    background-color: var(--couleur-principale);
+    color: var(--couleur-texte-inverse);
+    padding: 12px 25px;
+    border-radius: 25px;
+    /* Le look "pilule" arrondie */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--police-principale);
+    transition: all 0.3s ease;
+    /* Transition douce sur tout */
+    margin-top: 15px;
+    /* Espace au-dessus du bouton */
+}
+
+.bouton-cta:hover {
+    background-color: var(--couleur-secondaire);
+    /* Change de couleur au survol */
+    transform: translateY(-2px);
+    /* Petit effet de "soulèvement" */
+}
+
+/* ==================================
+   6. PIED DE PAGE (Footer)
+   ================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    /* Couleur discrète */
+    margin-top: 30px;
+}
+
+/* ==================================
+   9. PAGE CONTACT (Formulaire)
+   ================================== */
+
+/* On centre la section sur la page */
+#contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    /* Centre horizontalement */
+}
+
+/* On centre les titres */
+#contact-form h2,
+#contact-form p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Chaque "bloc" (label + input) */
+.form-groupe {
+    margin-bottom: 20px;
+}
+
+.form-groupe label {
+    display: block;
+    /* Le label prend toute la largeur */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--couleur-secondaire);
+}
+
+/* Style pour les champs de texte et le grand message */
+.form-groupe input[type="text"],
+.form-groupe input[type="email"],
+.form-groupe textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* Coins arrondis, comme le reste */
+    font-family: var(--police-principale);
+    /* Ta police Nunito */
+    font-size: 1rem;
+
+    /* Petite astuce pour que le padding ne casse pas la largeur */
+    box-sizing: border-box;
+}
+
+/* Le bouton d'envoi */
+.form-groupe button {
+    border: none;
+    /* Le bouton n'a pas besoin de bordure */
+    cursor: pointer;
+    /* Montre une main au survol */
+}
+
+/* ==================================
+   10. FOOTER & ICÔNES SOCIALES
+   ================================== */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--couleur-secondaire);
+    /* Fond sombre, comme le header */
+    color: #aaa;
+    /* Couleur du texte de copyright (gris clair) */
+    margin-top: 40px;
+}
+
+.footer-social {
+    margin-bottom: 15px;
+    /* Espace entre les icônes et le copyright */
+}
+
+/* Style de chaque icône */
+.social-icon {
+    margin: 0 15px;
+    /* Espace entre les icônes */
+    color: var(--couleur-texte-inverse);
+    /* Couleur de l'icône (blanc) */
+    text-decoration: none;
+    /* Enlève le soulignement */
+    font-size: 2rem;
+    /* Augmente la taille de l'icône (2rem = 2x la taille normale) */
+
+    transition: color 0.3s ease;
+    /* Effet de transition doux */
+}
+
+/* Effet au survol */
+.social-icon:hover {
+    color: var(--couleur-principale);
+    /* Change en bleu au survol */
+}
+
+/* ==================================
+   11. SECTION ACCUEIL (Avec photo)
+   ================================== */
+
+#accueil {
+    /* Ajoute un peu de padding en bas pour aérer */
+    padding-bottom: 50px;
+}
+
+/* Conteneur principal pour le texte ET la photo */
+.accueil-content {
+    display: flex;
+    /* Met le texte et la photo côte à côte */
+    align-items: center;
+    /* Centre verticalement les deux éléments */
+    justify-content: center;
+    /* Centre horizontalement l'ensemble */
+    gap: 40px;
+    /* Espace entre la photo et le texte */
+
+    max-width: 900px;
+    /* Limite la largeur du contenu */
+    margin: 0 auto;
+    /* Centre le conteneur */
+}
+
+/* La partie texte */
+.accueil-texte {
+    flex: 2;
+    /* Prend plus de place que la photo */
+    text-align: left;
+    /* Aligne le texte à gauche */
+}
+
+/* La partie photo */
+.accueil-photo {
+    flex: 1;
+    /* Prend une part de l'espace */
+    text-align: center;
+    /* Centre la photo si elle est plus petite */
+}
+
+.accueil-photo img {
+    width: 200px;
+    /* Taille fixe pour l'image (adapte si besoin) */
+    height: 200px;
+    /* Hauteur fixe */
+    border-radius: 50%;
+    /* <<<<< C'EST ÇA QUI REND L'IMAGE RONDE ! */
+    object-fit: cover;
+    /* Recadre l'image pour qu'elle remplisse le cercle */
+    border: 5px solid var(--couleur-principale);
+    /* Bordure colorée autour */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Petite ombre */
+}
+
+/* ==================================
+   12b. SECTION COMPETENCES
+   ================================== */
+.competences-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Pour que ça passe à la ligne sur mobile */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.categorie-competence {
+    flex: 1;
+    /* Chaque colonne prend la même largeur */
+    min-width: 250px;
+    /* Largeur minimum */
+    background-color: var(--couleur-fond);
+    /* Gris clair */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.categorie-competence h3 {
+    text-align: center;
+    border-bottom: 2px solid var(--couleur-principale);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.categorie-competence ul {
+    list-style: none;
+    /* Pas de puces moches */
+    padding: 0;
+}
+
+.categorie-competence li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #ccc;
+    /* Petite barre grise à gauche */
+}
+
+/* ==================================
+   13. Responsive Design
+   ================================== */
+@media (max-width: 768px) {
+    .accueil-content {
+        flex-direction: column;
+        /* La photo passe au-dessus du texte */
+        text-align: center;
+        /* Centre tout le texte */
+    }
+
+    .accueil-texte,
+    .accueil-photo {
+        flex: none;
+        /* Enlève la flexibilité */
+        width: 100%;
+        /* Reprend toute la largeur */
+    }
+
+    .accueil-texte h1 {
+        margin-top: 20px;
+        /* Espace entre la photo et le titre */
+    }
+}
+
+/* ==================================
+   13. INTRO ANIMATION PRELOADER
+   ================================== */
+
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--couleur-secondaire);
+    z-index: 9999;
+    /* Au-dessus de tout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Animation pour faire disparaître l'écran vers le haut */
+    animation: slideUp 1s ease-in-out forwards;
+    animation-delay: 2.5s;
+    /* Attend que le texte ait fini */
+}
+
+.intro-text {
+    text-align: center;
+    color: var(--couleur-texte-inverse);
+    font-family: var(--police-principale);
+    font-size: 4.5rem;
+    /* Gros texte */
+}
+
+.intro-text .nom {
+    display: block;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* On cible maintenant chaque lettre individuelle (span) dans le nom */
+.intro-text .nom span {
+    display: inline-block;
+    /* Important pour que le transform fonctionne */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textReveal 0.5s ease-out forwards;
+    /* La propriété var(--i) permet de décaler chaque lettre */
+    animation-delay: calc(0.1s * var(--i) + 0.5s);
+}
+
+.intro-text .prenom {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #ffffff;
+    /* Blanc */
+
+    /* Animation du prénom */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textReveal 1s ease-out forwards;
+    animation-delay: 1.5s;
+    /* Arrive après que tout le nom soit affiché */
+}
+
+/* --- LES ANIMATIONS (Keyframes) --- */
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(-100%);
+        /* Monte tout l'écran */
+    }
+}
+
+/* ==================================
+   14. SECTION EXPERIENCES (TIMELINE)
+   ================================== */
+
+.timeline-container {
+    display: flex;
+    overflow-x: auto;
+    /* Active le défilement horizontal */
+    padding: 20px 5px;
+    /* Un peu d'espace pour l'ombre */
+    gap: 20px;
+    scroll-behavior: smooth;
+
+    /* Cache la barre de défilement (optionnel, plus joli) */
+    scrollbar-width: thin;
+    scrollbar-color: var(--couleur-principale) var(--couleur-fond);
+}
+
+/* Style de la barre de scroll pour Chrome/Safari */
+.timeline-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+    background: var(--couleur-principale);
+    border-radius: 4px;
+}
+
+.timeline-card {
+    min-width: 300px;
+    /* Largeur fixe pour chaque carte */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Pour que l'image ne dépasse pas */
+    border-left: 5px solid var(--couleur-principale);
+    /* Petite touche de couleur */
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    /* Monte un peu au survol */
+}
+
+.card-img-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: var(--couleur-secondaire);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    /* Recadre l'image proprement sans déformer */
+    border-bottom: 2px solid var(--couleur-principale);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.timeline-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: var(--couleur-texte);
+}
+
+.timeline-card .company {
+    display: block;
+    font-weight: bold;
+    color: var(--couleur-principale);
+    margin-bottom: 5px;
+}
+
+.timeline-card .date {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.timeline-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Le conteneur qui gère la grille */
+.grid-container {
+    display: grid;
+    /* Crée 2 colonnes de taille égale */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    /* Espace entre les boutons */
+    max-width: 900px;
+    margin: 0 auto;
+    /* Centrer le bloc */
+}
+
+/* Le style des boutons (nettoyé pour éviter les répétitions) */
+.bouton-doc {
+    background-color: #4da6ff;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centre le texte dans le bouton */
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.bouton-doc:hover {
+    transform: translateY(-3px);
+    /* Petit effet de saut au survol */
+    background-color: #3395ff;
+}
+
+/* VERSION MOBILE : Si l'écran est petit, on passe à 1 colonne */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* 1 seule colonne sur téléphone */
+    }
+}
+
+/* ==================================
+   15. LOGOS DANS LA LISTE
+   ================================== */
+.logiciel-list li {
+    display: flex;
+    align-items: center;
+    /* Aligne le logo et le texte au centre */
+}
+
+.mini-logo {
+    height: 25px;
+    /* Petit logo */
+    width: auto;
+    object-fit: contain;
+    margin-right: 10px;
+    /* Espace entre le logo et le texte */
+    border-radius: 4px;
+    background-color: white;
+    /* Pour les logos avec fond transparent (utile en dark mode) */
+    padding: 2px;
+}
+
+/* S'il y a plusieurs logos (ex: catia + onshape) */
+.mini-logo+.mini-logo {
+    margin-left: -5px;
+    /* Rapproche un peu les deux logos */
+}
