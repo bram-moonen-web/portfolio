@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Hackathon - MOONEN Bram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="projet-intro" style="padding: 50px 10%; text-align: center;">
+            <div class="accueil-texte">
+                <h1>Main Robotique Biomimétique</h1>
+                <h3 style="color: var(--couleur-principale); margin-top: 15px;">2ème Place - Hackathon 2k25</h3>
+
+                <p style="margin-top: 20px; max-width: 900px; margin: 20px auto;">
+                    Un sprint de <strong>10h</strong> pour concevoir une main robotique fonctionnelle.
+                    Un projet né de la synergie entre le <strong>DU Technologies Santé</strong> (TSS) et le <strong>DU
+                        Robotique</strong>.
+                </p>
+
+                <a href="projets.html"
+                    style="display: inline-block; margin-top: 30px; text-decoration: none; color: #333; font-weight: bold; border: 1px solid #333; padding: 10px 20px; border-radius: 0;">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+        </section>
+
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">Une équipe "Commando" de 6</h2>
+                <p>
+                    Face à des équipes de 9 personnes, nous n'étions que <strong>6 étudiants</strong>. Ce qui aurait pu
+                    être un handicap s'est transformé en force grâce à notre diversité technique.
+                </p>
+                <br>
+                <p>
+                    L'équipe réunissait l'ensemble des compétences nécessaires :
+                </p>
+                <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>3 GEII :</strong> Génie Électrique et Informatique Industrielle.</li>
+                    <li><strong>1 INFO :</strong> Informatique.</li>
+                    <li><strong>1 GMP :</strong> Génie Mécanique et Productique.</li>
+                    <li><strong>1 MP :</strong> Mesures Physiques.</li>
+                </ul>
+            </div>
+
+
+
+        </section>
+
+        <section
+            style="padding: 40px 10%; display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 50px; background-color: #f4f4f4;">
+            <div style="flex: 1; min-width: 300px;">
+                <video controls width="100%" style="border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <source src="CATIA%203D.MOV" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">Modélisation 3D de la
+                    main</p>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">Conception Mécanique & Laser</h2>
+                <p>
+                    J'ai pu apprendre la modélisation sur deux CAO tel que <strong>CATIA</strong> et
+                    <strong>ONSHAPE</strong> avec l'aide de notre collègue en GMP.
+                </p>
+                <br>
+                <p>
+                    L'objectif était un design "technique" et robuste. Nous avons opté pour le
+                    <strong>Plexiglass</strong>, découpé au laser directement au FabLab :
+                </p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li><strong>Plexi Orange :</strong> Pour la structure principale.</li>
+                    <li><strong>Plexi Transparent :</strong> Pour voir les mécanismes internes.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">Méthodologie : Le Test des 5 LEDs</h2>
+                <p>
+                    Avant l'assemblage final, nous nous sommes imposé une phase de <strong>test unitaire des
+                        capteurs</strong> pour ne pas risquer de griller les servomoteurs ou de casser la mécanique
+                    fragile.
+                </p>
+                <br>
+                <p>
+                    J'ai réalisé un montage avec un pont diviseur de tension connecté à une rampe de <strong>5
+                        LEDs</strong>.
+                    <br><strong>Le principe :</strong> Plus le capteur de flexion est plié, plus la tension varie et
+                    plus le nombre de LEDs allumées augmente. Cela nous a permis de valider le programme et de calibrer
+                    la sensibilité des capteurs visuellement.
+                </p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <video controls width="100%" style="border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <source src="Test%20avec%20led.MOV" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">Validation des capteurs
+                    Flex</p>
+            </div>
+
+        </section>
+
+        <section
+            style="padding: 40px 10%; display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 50px; background-color: #f4f4f4;">
+
+            <div style="flex: 1; min-width: 300px;">
+                <video controls width="100%" style="border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <source src="MAIN%20FINI.MOV" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">Résultat & Difficultés</h2>
+                <p>
+                    La principale difficulté rencontrée fut l'hétérogénéité des doigts. Une fois montés, chaque
+                    servomoteur demandait un angle légèrement différent pour fermer complètement la phalange associée.
+                </p>
+                <br>
+                <p>
+                    Nous avons dû développer une routine de calibration logicielle pour chaque doigt. Au final, la main
+                    était parfaitement fonctionnelle, ce qui nous a valu la <strong>2ème place sur 8 équipes</strong>.
+                </p>
+            </div>
+
+        </section>
+
+        <section id="competences" style="padding-bottom: 60px;">
+            <h2 style="text-align: center; margin: 40px 0;">Technologies & Outils</h2>
+
+            <div class="competences-container">
+
+                <div class="categorie-competence">
+                    <h3>Mécanique</h3>
+                    <ul>
+                        <li>Modélisation <strong>CATIA</strong></li>
+                        <li>Découpe Laser (FabLab)</li>
+                        <li>Assemblage Plexiglass</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Électronique</h3>
+                    <ul>
+                        <li>Arduino Uno (C++)</li>
+                        <li>Conditionnement du signal</li>
+                        <li>Servomoteurs & Capteurs Flex</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Travail Pluridisciplinaire</li>
+                        <li>Gestion du temps (Sprint 10h)</li>
+                        <li>Rigueur (Tests unitaires)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+        <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
+    </footer>
+
+
+</body>
+
+</html>

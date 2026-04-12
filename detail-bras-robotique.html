@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Bras Robotique - MOONEN Bram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="projet-intro" style="padding: 50px 10%; text-align: center;">
+            <div class="accueil-texte">
+                <h1>Bras Robotique Universal Robots</h1>
+                <h3 style="color: #007bff; margin-top: 15px;">Programmation Cobotique</h3>
+
+                <p style="margin-top: 20px; max-width: 900px; margin: 20px auto;">
+                    Programmation et mise en service d'un bras manipulateur collaboratif <strong>Universal
+                        Robots</strong>.
+                    Un projet tourné vers l'industrie 4.0 et l'automatisation avancée.
+                </p>
+
+                <a href="projets.html"
+                    style="display: inline-block; margin-top: 30px; text-decoration: none; color: #333; font-weight: bold; border: 1px solid #333; padding: 10px 20px; border-radius: 0;">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+        </section>
+
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">L'Interface de Programmation (Polyscope)</h2>
+                <p>
+                    La programmation d'un cobot Universal Robots se fait principalement via son interface graphique
+                    <strong>Polyscope</strong>, qui permet de structurer la logique sous forme d'arbre.
+                </p>
+                <br>
+                <p>
+                    Au cours de ce projet, j'ai manipulé plusieurs structures :
+                </p>
+                <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Mouvements :</strong> Utilisation des instructions <code>MoveJ</code> (articulaire) et
+                        <code>MoveL</code> (linéaire) pour des trajectoires fluides.
+                    </li>
+                    <li><strong>Capteurs :</strong> Intégration de conditions comme <code>Wait sensor1=HI</code> pour
+                        synchroniser le robot avec son environnement.</li>
+                    <li><strong>Préhenseur :</strong> Commandes <code>Gripper Close</code> et <code>Open</code> pour
+                        attraper et déposer des objets dynamiquement.</li>
+                </ul>
+            </div>
+
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="IMG_1805.jpg" alt="Programmation Polyscope Universal Robots"
+                    style="width: 100%; max-width: 400px; border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">Arborescence Polyscope - Mouvements et
+                    Capteurs</p>
+            </div>
+        </section>
+
+        <section style="padding: 40px 10%; text-align: center; background-color: #f4f4f4;">
+
+            <div style="max-width: 800px; margin: 0 auto 40px auto; text-align: left;">
+                <h2 style="margin-bottom: 20px; text-align: center;">Réalisation Pratique & Vidéo</h2>
+                <p>
+                    L'objectif était de déplacer le cube d'un point défini (en vert sur la vidéo) à un autre point vert.
+                    Le passage de la théorie à la pratique demande beaucoup de paramétrages. Les positions spatiales
+                    (Waypoints) doivent être approchées avec rigueur pour ne pas endommager le matériel ni
+                    l'environnement.
+                </p>
+                <br>
+                <p>
+                    Ce projet démontre ma capacité à comprendre la logique séquentielle, à l'appliquer de manière
+                    spatiale sur un robot collaboratif et à vérifier correctement le cycle de fonctionnement.
+                </p>
+            </div>
+
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <video controls width="100%" style="border-radius: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <source src="IMG_1804.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">Démonstration du
+                    processus</p>
+            </div>
+        </section>
+
+        <section id="competences" style="padding-bottom: 60px;">
+            <h2 style="text-align: center; margin: 40px 0;">Technologies & Outils</h2>
+
+            <div class="competences-container">
+
+                <div class="categorie-competence">
+                    <h3>Matériel</h3>
+                    <ul>
+                        <li>Bras collaboratif <strong>Universal Robots</strong></li>
+                        <li>Effecteurs (Pinces/Gripper)</li>
+                        <li>Capteurs de position/présence</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Logiciel</h3>
+                    <ul>
+                        <li>Interface de programmation <strong>Polyscope</strong></li>
+                        <li>Logique d'arbre (Wait, MoveJ, MoveL)</li>
+                        <li>Apprentissage de Waypoints</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Compétences</h3>
+                    <ul>
+                        <li>Logique Séquentielle</li>
+                        <li>Mise en service de Robot</li>
+                        <li>Sécurité industrielle</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+        <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
+    </footer>
+
+
+</body>
+
+</html>
