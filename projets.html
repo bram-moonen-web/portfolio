@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets - MOONEN Bram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Style global */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--couleur-fond);
+            color: var(--couleur-texte);
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Conteneur principal */
+        .projects-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        /* La carte du projet */
+        .project-card {
+            background-color: var(--couleur-fond-contenu);
+            /* La carte est blanche */
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #e0e0e0;
+
+            /* Alignement horizontal : Image à gauche, Texte à droite */
+            display: flex;
+            align-items: center;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Style de l'image */
+        .project-image {
+            width: 35%;
+            /* L'image prend 35% de la largeur */
+            height: 250px;
+            object-fit: contain;
+            /* L'image n'est pas coupée */
+            background-color: white;
+            /* Fond blanc derrière l'image */
+            padding: 10px;
+        }
+
+        /* Style du texte */
+        .project-content {
+            flex: 1;
+            /* Le texte prend toute la place restante */
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: var(--couleur-texte);
+            /* Adapte au mode sombre */
+            margin-bottom: 0.5rem;
+        }
+
+        .project-desc {
+            color: var(--couleur-texte);
+            /* Adapte au mode sombre */
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .tech-tag {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            padding: 5px 10px;
+            border-radius: 0;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html" class="active">Mes Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-container">
+        <h1>Mes Réalisations</h1>
+        <p style="margin-bottom: 2rem;">Voici les projets techniques sur lesquels j'ai travaillé.</p>
+
+        <a href="detail-bras-robotique.html" class="project-card">
+
+            <img src="IMG_BRAS.png" alt="Interface Universal Robots" class="project-image"
+                style="object-fit: contain; transform: scale(0.8);">
+
+            <div class="project-content">
+                <h3 class="project-title">Bras Robotique (Universal Robots)</h3>
+                <p class="project-desc">Programmation et mise en service d'un bras manipulateur collaboratif.
+                    Utilisation de l'interface Polyscope pour la logique séquentielle et spatiale.</p>
+
+                <div class="tags">
+                    <span class="tech-tag">Universal Robots</span>
+                    <span class="tech-tag">Polyscope</span>
+                    <span class="tech-tag">Cobotique</span>
+                    <span class="tech-tag" style="background-color: #eaeaea; color: #555;"><i
+                            class="fa-regular fa-calendar"></i> 5 Mars 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="detail-hackathon.html" class="project-card">
+
+            <img src="main.png" alt="Main Robotique" class="project-image">
+
+            <div class="project-content">
+                <h3 class="project-title">Main Robotisée (Hackathon)</h3>
+                <p class="project-desc">Conception d'une main robotique contrôlée par capteurs de flexion. Projet
+                    réalisé en équipe de 6 sur 10h.</p>
+
+                <div class="tags">
+                    <span class="tech-tag">Modelisation/Découpe</span>
+                    <span class="tech-tag">Capteurs & Arduino</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag" style="background-color: #eaeaea; color: #555;"><i
+                            class="fa-regular fa-calendar"></i> 13 Décembre 2025</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="sae-thermo.html" class="project-card">
+
+
+            <img src="CARTE_TDB-removebg-preview.png" alt="Thermomètre de bain" class="project-image"
+                style="transform: rotate(2deg) scale(0.8);">
+
+            <div class="project-content">
+                <h3 class="project-title">Thermomètre de Bain (SAE S1)</h3>
+                <p class="project-desc">Réalisation d'un thermometre de bain pour bébé, notre projet du premier semesre
+                    en 40h.</p>
+
+                <div class="tags">
+                    <span class="tech-tag">Fabrication PCB</span>
+                    <span class="tech-tag">Électronique Analogique</span>
+                    <span class="tech-tag">Capteurs & AOP</span>
+                    <span class="tech-tag" style="background-color: #eaeaea; color: #555;"><i
+                            class="fa-regular fa-calendar"></i> Septembre - Janvier 2026</span>
+                </div>
+            </div>
+        </a>
+
+
+    </section>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
+    </footer>
+
+
+</body>
+
+</html>
