@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP informatique industrielle - Bram MOONEN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index_fr.html">Accueil</a></li>
+                <li><a href="projets_fr.html">Mes Projets</a></li>
+                <li><a href="contact_fr.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="lang-selector">
+            <button class="lang-btn">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Français"> FR <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem;"></i>
+            </button>
+            <div class="lang-dropdown">
+                <a href="detail-tp-info-indus.html" class="lang-option">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- INTRO -->
+        <section id="projet-intro" style="padding: 50px 10%; text-align: center;">
+            <div class="accueil-texte">
+                <h1>TP informatique industrielle - STM32</h1>
+                <h3 style="color: #007bff; margin-top: 15px;">Programmation microcontrôleur</h3>
+
+                <p style="margin-top: 20px; max-width: 900px; margin: 20px auto;">
+                    Programmation d'un microcontrôleur <strong>STM32</strong> dans le cadre du TP d'Informatique
+                    Industrielle (mars - mai 2026). Mise en oeuvre de la logique séquentielle et de l'interfaçage de
+                    périphériques.
+                </p>
+
+                <a href="projets_fr.html"
+                    style="display: inline-block; margin-top: 30px; text-decoration: none; color: #333; font-weight: bold; border: 1px solid #333; padding: 10px 20px; border-radius: 0;">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+        </section>
+
+        <!-- Texte pleine largeur -->
+        <section style="padding: 30px 10% 0;">
+            <h2 style="margin-bottom: 20px;">Contexte du TP</h2>
+            <p style="line-height: 1.8;">
+                Ce projet a été ma première immersion dans le code en C sur microcontrôleur. Dans le cadre de mon
+                parcours GEII, j'ai développé de A à Z l'architecture logicielle d'un système embarqué sur
+                <strong>STM32</strong>. Techniquement, le programme récupère les données analogiques issues d'un
+                générateur, les traite, puis communique via le bus <strong>I2C</strong> pour écrire ces valeurs en
+                temps réel sur un écran OLED. En parallèle, le système gère la commande de puissance en envoyant un
+                signal <strong>PWM</strong> calculé et adapté vers un pont en H pour piloter un moteur. J'ai
+                également configuré une liaison série <strong>UART</strong> pour transmettre les trames de données et
+                de débogage vers le PC. C'est une excellente synthèse qui lie le code bas niveau, les interruptions
+                et les protocoles matériels. Si vous souhaitez plus de détails, allez jeter un coup d'œil à mon
+                compte rendu !
+            </p>
+        </section>
+
+        <!-- Image + bouton PDF côte à côte -->
+        <section style="padding: 20px 10% 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <a href="info-indus/Compte rendu TP INFO INDUS.pdf" target="_blank"
+                    style="display: inline-flex; align-items: center; gap: 10px; margin-top: 10px; background-color: #007bff; color: white; text-decoration: none; padding: 12px 24px; border-radius: 0; font-weight: bold;">
+                    <i class="fa-solid fa-file-pdf"></i> Voir le compte rendu complet
+                </a>
+            </div>
+
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="info-indus/IMG_2499.png" alt="TP STM32 Informatique Industrielle"
+                    style="width: 85%; max-width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transform: rotate(270deg);">
+            </div>
+        </section>
+
+        <!-- SECTION 2 : vidéo -->
+        <section style="padding: 40px 10% 50px; text-align: center; background-color: #f4f4f4;">
+
+            <h2 style="margin-bottom: 10px;">Démonstration en vidéo</h2>
+            <p style="color: #666; margin-bottom: 30px; font-size: 0.95em;">Éléments visibles dans la démonstration</p>
+
+            <!-- Liste à puces des éléments -->
+            <ul style="
+                list-style: none;
+                padding: 0;
+                margin: 0 auto 40px auto;
+                max-width: 680px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            ">
+                <li style="background: #fff; border-left: 4px solid #007bff; padding: 14px 18px; border-radius: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.07);">
+                    <strong>Écran OLED</strong> — Titre, rapport cyclique PWM, sens de rotation, vitesse en tr/min.
+                </li>
+                <li style="background: #fff; border-left: 4px solid #007bff; padding: 14px 18px; border-radius: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.07);">
+                    <strong>Rampe de LEDs (Vu-mètre)</strong> — Indicateur visuel de la consigne de vitesse.
+                </li>
+                <li style="background: #fff; border-left: 4px solid #007bff; padding: 14px 18px; border-radius: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.07);">
+                    <strong>Boutons poussoirs</strong> — Contrôle manuel (accélération, décélération, inversion du sens).
+                </li>
+                <li style="background: #fff; border-left: 4px solid #007bff; padding: 14px 18px; border-radius: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.07);">
+                    <strong>Carte microcontrôleur</strong> — Carte mère STM32 (traitement et commande centrale).
+                </li>
+                <li style="background: #fff; border-left: 4px solid #007bff; padding: 14px 18px; border-radius: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.07);">
+                    <strong>Ensemble Moteur / Génératrice</strong> — Système mécanique (actionneur et capteur de vitesse analogique).
+                </li>
+                <li style="background: #fff; border-left: 4px solid #007bff; padding: 14px 18px; border-radius: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.07);">
+                    <strong>Pont en H</strong> — Carte de puissance (interface d'alimentation entre la carte et le moteur).
+                </li>
+            </ul>
+            <div style="max-width: 400px; margin: 0 auto;">
+                <video id="stm32-video" controls muted width="100%"
+                    style="box-shadow: 0 5px 15px rgba(0,0,0,0.2); transform: rotate(270deg); display: block;">
+                    <source src="info-indus/IMG_2500.MOV" type="video/mp4">
+                    <source src="info-indus/IMG_2500.MOV" type="video/quicktime">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <p style="font-size: 0.85em; color: #888; margin-top: 8px;">Demonstration du TP STM32 (x1.5)</p>
+            </div>
+        </section>
+
+        <!-- COMPETENCES -->
+        <section id="competences" style="padding-bottom: 60px;">
+            <h2 style="text-align: center; margin: 40px 0;">Technologies & outils</h2>
+
+            <div class="competences-container">
+
+                <div class="categorie-competence">
+                    <h3>Matériel</h3>
+                    <ul>
+                        <li>Microcontrôleur <strong>STM32</strong></li>
+                        <li>Peripheriques (LEDs, boutons, capteurs)</li>
+                        <li>Liaisons numeriques & analogiques</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Logiciel</h3>
+                    <ul>
+                        <li>Environnement de développement STM32</li>
+                        <li>Programmation en C embarqué</li>
+                        <li>Débogage et tests unitaires</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Compétences</h3>
+                    <ul>
+                        <li>Programmation temps réel</li>
+                        <li>Analyse de systèmes embarqués</li>
+                        <li>Rédaction de compte rendu technique</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        
+            <a href="https://github.com/bram-moonen-web" target="_blank" class="social-icon" title="nox">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <p>© 2025 - Bram MOONEN. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Vitesse de lecture x1.5
+        const stm32Video = document.getElementById('stm32-video');
+        if (stm32Video) {
+            stm32Video.addEventListener('loadedmetadata', () => {
+                stm32Video.playbackRate = 1.5;
+            });
+        }
+    </script>
+
+        
+
+</body>
+
+</html>
